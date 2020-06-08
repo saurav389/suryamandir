@@ -25,7 +25,7 @@ SECRET_KEY = 'i3a#t$2ac#z8#)tyh4&p-yyf(gf9t%+4yr2dobu0p)a8!&k%*5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['bhadseni-suryamandir.herokuapp','127.0.0.1']
 
 
 # Application definition
@@ -139,7 +139,7 @@ MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR),'media')
 MEDIA_URL = '/media/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static/")
+    os.path.join(BASE_DIR, "static")
 ]
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),"static_cdn")
 LOGIN_REDIRECT_URL = 'post'
