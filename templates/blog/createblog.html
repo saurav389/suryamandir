@@ -1,0 +1,27 @@
+{% extends 'home.html'%}
+{% load crispy_forms_tags %}
+{% block content %}
+ <!-- Blog Post -->
+ <div class="container" style="padding-top: 90px;">
+
+    <div class="row">
+
+      <!-- Blog Entries Column -->
+      <div class="col-md-8">
+        
+          <div class="card-body">
+            <h2 class="card-title">New Blog</h2>
+            <form method="POST" action="{% url 'new' %}" enctype='multipart/form-data'> {% csrf_token %}
+             
+              {{form|crispy}}
+              <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+        </div>
+     <!--  <script type="text/javascript">
+         CKEDITOR.replace( 'content' )
+       </script>-->
+      </div>
+    </div>
+    
+     <script> var s = document.createElement('script'); s.setAttribute('src','http://developer.quillpad.in/static/js/quill.js?lang=Hindi&key=2558bbfed7298c52719a00e03695dbe3'); s.setAttribute('id','qpd_script'); document.head.appendChild(s); </script> <span id="qpd_banner">Hindi Typing On This Site Is Powered By <a href="http://www.quillpad.in/" target="_blank">Quillpad</a>.</span>  
+{% endblock %}
